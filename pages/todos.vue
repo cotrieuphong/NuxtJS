@@ -1,5 +1,7 @@
 <template lang="pug">
-  h1 Todos
+  .todo
+    h1 Todos
+    BaseInput(label='Name')
 </template>
 <script>
 export default {
