@@ -1,6 +1,6 @@
 <template lang="pug">
-  .nav
-    nuxt-link(v-for="item in items" :key="item.id" :to="item.url" class="nav__link") {{item.context}}
+  .nuxt-nav
+    nuxt-link(v-for="item in items" :key="item.id" :to="item.url" class="nuxt-nav__link") {{item.context}}
 </template>
 <script>
 export default {
@@ -40,22 +40,5 @@ export default {
 }
 </script>
 <style lang="scss">
-.nav {
-  @include size(100%, 50px);
-  display: flex;
-  align-items: center;
-  padding: 20px;
-
-  &__link {
-    text-decoration: none;
-    color: $white;
-    padding: 5px 10px;
-    transition: all 0.3s ease;
-    border-radius: $border-radius-base;
-
-    &:hover {
-      background-color: rgba($white, 0.4);
-    }
-  }
-}
+@import '../assets/scss/components/BaseNavbar';
 </style>

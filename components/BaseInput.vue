@@ -1,11 +1,13 @@
 <template lang="pug">
-  div
+  .form-group
     label(v-if='label') {{label}}
-    input(:value='value' @input='updateValue' type='text')
+    .input-group
+      input(:value='value' @input='updateValue' v-bind='$attrs')
 </template>
 
 <script>
 export default {
+  inheritAttrs: false,
   props: {
     label: {
       type: String,

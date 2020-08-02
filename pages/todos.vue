@@ -1,10 +1,20 @@
 <template lang="pug">
-  .todo
-    h1 Todos
-    BaseInput(label='Name')
+  .nuxt-container
+    BaseNavbar
+    .nuxt-panel
+      .nuxt-todo
+        h1 Todos
+        BaseInput(label='Name' v-model='event.name')
 </template>
 <script>
 export default {
+  data() {
+    return {
+      event: {
+        name: '',
+      },
+    }
+  },
   head() {
     return {
       title: 'NuxtJs Todos App',
@@ -19,3 +29,6 @@ export default {
   },
 }
 </script>
+<style lang="scss" scoped>
+@import '../assets/scss/pages/todos';
+</style>

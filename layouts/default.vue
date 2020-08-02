@@ -1,36 +1,7 @@
 <template lang="pug">
-  #app
-    .container
-      BaseNavBar
-      Nuxt
+  .nuxt
+    Nuxt
 </template>
 <script>
 export default {}
 </script>
-<style lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-family: 'Open Sans', sans-serif;
-}
-
-#app {
-  @include square(100%);
-  min-height: 100vh;
-  background: linear-gradient(to left, #ad5389, #3c1053);
-  padding: 30px;
-}
-
-.container {
-  display: flex;
-  background-color: rgba($blue, 0.8);
-  border-radius: $border-radius-base;
-  flex-direction: column;
-  min-height: calc(100vh - 60px);
-}
-</style>

@@ -29,7 +29,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['~assets/scss/variables.scss', '~assets/scss/mixins.scss'],
+  css: ['~assets/scss/main.scss'],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins

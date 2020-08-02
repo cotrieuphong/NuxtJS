@@ -1,6 +1,8 @@
 <template lang="pug">
-  .dashboard
-    h1 NuxtJS + Pug + SCSS
+  .nuxt-container
+    BaseNavbar
+    .nuxt-panel.nuxt-dashboard
+      h1 NuxtJS + Pug + SCSS
 </template>
 <script>
 export default {
@@ -19,9 +21,5 @@ export default {
 }
 </script>
 <style lang="scss">
-.dashboard {
-  @include flex-center;
-  color: $white;
-  padding: 100px 0;
-}
+@import '../assets/scss/pages/index';
 </style>

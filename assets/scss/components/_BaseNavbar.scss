@@ -1,0 +1,25 @@
+// ======================================================
+// Components: Base Navbar
+// ======================================================
+
+.nuxt-nav {
+  @include size(100%, 50px);
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba($blue, 0.8);
+  margin-bottom: 50px;
+  border-radius: 4px;
+
+  &__link {
+    text-decoration: none;
+    color: $white;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+    border-radius: $border-radius-base;
+
+    &:hover {
+      background-color: rgba($white, 0.4);
+    }
+  }
+}
