@@ -1,6 +1,10 @@
-// 1.Abstracts
+// ======================================================
+// Share scss variables and mixins across your project
+// ======================================================
+
+// DO NOT SPECIFIC ANY STYLE HERE
+// ONLY IMPORT VARIABLES AND MIXINS
+
+// Abstracts
 @import 'abstracts/variables';
 @import 'abstracts/mixins';
-
-// 2.Global
-@import 'global/global';
