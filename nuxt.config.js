@@ -29,7 +29,13 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['~assets/scss/global.scss'],
+  css: [
+    '~assets/scss/main.scss',
+    'primeflex/primeflex.css',
+    'primevue/resources/primevue.min.css',
+    'primevue/resources/themes/saga-blue/theme.css',
+    'primeicons/primeicons.css',
+  ],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
@@ -52,7 +58,7 @@ export default {
    */
   modules: ['@nuxtjs/style-resources'],
   styleResources: {
-    scss: ['~assets/scss/main.scss'],
+    scss: ['~assets/scss/global.scss'],
   },
   /*
    ** Build configuration
