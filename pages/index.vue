@@ -1,30 +1,43 @@
 <template lang="pug">
-  .nuxt-container
+  .nuxt-container#nuxt-container
     ul.nuxt-list
-      li.nuxt-item(v-for="item in items" :key="item"
-      @click="animateBox") {{ item }}
-
+      li.nuxt-item(v-for="item in items" :key="item.name") 
+        nuxt-link(:to="item.link") {{ item.name }}
 </template>
 <script>
 import { gsap } from 'gsap'
 export default {
+  pageTransition: 'page',
   data() {
     return {
-      items: ['Todos App', 'Calories Counting App', 'Shop'],
+      items: [
+        {
+          name: 'Hiragana',
+          link: 'Hiragana',
+        },
+        {
+          name: 'Katakana',
+          link: 'Katakana',
+        },
+        {
+          name: 'Kanji',
+          link: 'Kanji',
+        },
+      ],
     }
   },
   mounted() {
-    gsap.from('.nuxt-item', {
-      duration: 1,
-      opacity: 0,
-      scale: 0,
-      stagger: {
-        each: 0.2,
-        from: 'center',
-      },
-      ease: 'back.out(1)',
-      transformOrigin: '50% 50%',
-    })
+    // gsap.from('.nuxt-item', {
+    //   duration: 1,
+    //   opacity: 0,
+    //   scale: 0,
+    //   stagger: {
+    //     each: 0.2,
+    //     from: 'center',
+    //   },
+    //   ease: 'back.out(1)',
+    //   transformOrigin: '50% 50%',
+    // })
   },
   methods: {
     animateBox(el) {
@@ -35,13 +48,14 @@ export default {
       const width = style.width + 'px'
       const height = style.height + 'px'
       const clone = element.cloneNode(true)
+      const container = document.getElementById('nuxt-container')
       clone.className = 'nuxt-clone'
       clone.style.position = 'fixed'
       clone.style.top = top
       clone.style.left = left
       clone.style.width = width
       clone.style.height = height
-      document.body.appendChild(clone)
+      container.appendChild(clone)
 
       gsap.to('.nuxt-clone', {
         duration: 0.6,
@@ -72,18 +86,6 @@ export default {
         },
       })
     },
-  },
-  head() {
-    return {
-      title: 'Home | NuxtJs App',
-      meta: [
-        {
-          hid: 'description',
-          name: 'descscription',
-          content: 'content',
-        },
-      ],
-    }
   },
 }
 </script>

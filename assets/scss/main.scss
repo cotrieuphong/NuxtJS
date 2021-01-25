@@ -16,9 +16,9 @@ html {
 
 .nuxt {
   @include square(100%);
-  min-height: 100vh;
-  background: linear-gradient(to left, #ad5389, #3c1053);
+  height: 100vh;
   padding: 30px;
+  overflow: hidden;
 
   &-panel {
     margin: 10px 0;

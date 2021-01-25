@@ -1,6 +1,5 @@
 <template lang="pug">
   .nuxt-container
-    BaseNavbar
     .nuxt-panel
       transition(name="todo" appear)
         .nuxt-todo
